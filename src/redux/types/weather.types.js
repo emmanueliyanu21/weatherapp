@@ -1,0 +1,6 @@
+export const SET_CITIES = 'SET_CITIES';
+export const SET_SEARCH_RESULT = 'SET_SEARCH_RESULT';
+export const SET_LOADING = 'SET_LOADING';
+export const SET_FAVORITES = 'SET_FAVORITES';
+export const SET_USER_LOCATION = 'SET_USER_LOCATION';
+export const SET_TOP_CITIES = 'SET_TOP_CITIES';

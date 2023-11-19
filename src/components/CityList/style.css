@@ -1,0 +1,131 @@
+.city-card {
+    min-width: 120px;
+    max-width: 150px;
+    width: 100%;
+    background-color: var(--clr-white);
+    border-radius: 4px;
+    height: 120px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.city-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: var(--clr-bk-grey)
+}
+
+.city-wrapper,
+.city-favourite {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: 100%;
+    cursor: pointer;
+    min-height: 160px;
+}
+
+.city-card-wrapper {
+    text-align: center;
+}
+
+.favorite-icon {
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    color: var(--clr-bright-orange)
+}
+
+.favorite-icon:hover svg {
+    transform: scale(1.2);
+}
+
+.temperature {
+    font-weight: 600;
+}
+
+.empty-note {
+    opacity: 0.5;
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.button a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.button span {
+    position: relative;
+    z-index: 2;
+    padding: 6px 10px;
+    font-size: 13px;
+    transition: color 0.7s ease;
+}
+
+.button .border {
+    fill: none;
+    stroke-width: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.button .bg-line {
+    fill: transparent;
+    stroke: var(--clr-bisque);
+    transition: all 0.8s ease-in-out;
+}
+
+.button .hl-line {
+    stroke: var(--clr-white);
+    stroke-dasharray: 40 480;
+    stroke-dashoffset: 40;
+    transition: all 0.8s ease-in-out;
+}
+
+.button:hover .bg-line {
+    fill: var(--clr-orange);
+    color: var(--clr-white);
+}
+
+.button span:hover {
+    color: var(--clr-white);
+}
+
+.button:hover .hl-line {
+    stroke-dashoffset: -480;
+}
+
+.city-favourite {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding-bottom: 15px;
+    overflow-y: scroll;
+    height: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.city-favourite::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    .city-wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .city-card {
+        max-width: 250px;
+    }
+}

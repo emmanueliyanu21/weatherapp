@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+  --ff-main: 'Mukta', sans-serif;
+  --clr-aliceblue: aliceblue;
+  --clr-white: #FFF;
+  --clr-aquamarine: aquamarine;
+  --clr-light-grey: #ccc;
+  --clr-light-blue: #e3e3e3;
+  --clr-orange: #e0803c;
+  --clr-grey: #f3f3f3;
+  --clr-bk-grey: #f4f4f4;
+  --clr-black: #000;
+  --clr-bisque: bisque;
+  --clr-bright-orange: rgb(241, 84, 11);
+}
+
+body {
+  margin: 0;
+  font-family: var(--ff-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'Mukta', sans-serif;
+}
+
+.weather-wrapper {
+  background-color: var(--clr-white);
+  border-radius: 8px;
+  margin: 10px;
+  padding: 20px;
+  min-height: 95vh;
+  background-color: var(--clr-aliceblue);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+.location-details {
+  background-color: var(--clr-aquamarine);
+  padding: 40px;
+  display: block;
+  height: 84.5vh;
+  border-radius: 0px 4px 4px 0px;
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 500px) {
+  .city-list-wrapper {
+      text-align: center;
+  }
+  .content-header {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
